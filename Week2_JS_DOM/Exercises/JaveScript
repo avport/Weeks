@@ -1,0 +1,939 @@
+console.log('');
+
+
+    Strings — Any grouping of keyboard characters (letters, spaces, numbers, or symbols) surrounded by single quotes ('Hello') or double quotes ("World!"). In the example above, 'New York City' is a string.
+    Numbers — Any number, including numbers with decimals: 4, 1516, .002, 23.42. In the example above, 40.7 is a number.
+    Booleans — Either true or false, with no quotations. In the example above, true is a boolean.
+    Null — Can only be null. It represents the absence of value.
+console.log('New York City');
+console.log(40.7);
+console.log(true);
+console.log(null);
+
+console.log(3 + 4); // Equals 7
+console.log(5 - 1); // Equals 4
+console.log(4 * 2); // Equals 8
+console.log(9 / 3); // Equals 3
+
+
+.length will find the length of a string
+console.log('Hello'.length);
+
+
+
+build in methods, string prototype
+console.log('Hello'.toUpperCase()); // 'HELLO'
+console.log('Hey'.startsWith('H')); // true
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype
+
+
+console.log(Math.random()); // random number between 0 and 1
+Math.random() * 50;
+Math.floor(Math.random() * 50);
+Math.floor(Math.random() * 50);
+floor rounds down to whoel number
+console.log(Math.floor(Math.random() * 100));
+
+
+comment out
+//
+/*   */
+
+
+Declaring variables
+constand - const
+
+const myAge = 11;
+console.log(myAge);
+// Output: 11
+
+let
+let meal = 'Enchiladas';
+console.log(meal);
+meal = 'Tacos';
+console.log(meal);
+// output: Enchiladas
+// output: Tacos
+
+
+
+undefined pirmitive data type
+let whatAmI;
+
+
+String Interpolation - The JavaScript term for inserting the data saved to a variable into a string is string interpolation. 
+let myPet = 'armadillo';
+console.log('I own a pet ' + myPet + '.'); 
+// Output: 'I own a pet armadillo.'
+
+
+let myPet = 'armadillo'
+console.log(`I own a pet ${myPet}.`)
+// Output: 'I own a pet armadillo.'
+use backticks
+
+
+
+control flow
+
+if/else
+	let needsCoffee = true;
+if (needsCoffee === true) {
+    console.log('Finding coffee');
+} else {
+    console.log('Keep on keeping on!');
+}
+falsy variable
+
+    false
+    0 and -0
+    "" and '' (empty strings)
+    null
+    undefined
+    NaN (Not a Number)
+    document.all (something you will rarely encounter)
+
+swapping truthiness and falsiness with !
+let isPhoneCharged = true; 
+if (!isPhoneCharged) {
+  console.log('Plug in your phone!');
+} else {
+  console.log('No need to charge!');
+}
+
+
+
+to check if two things are not equal to each other
+!==
+Use a single = to assign a value to a variable. Use ===to compare the values of two different variables.
+
+
+
+let moonPhase = 'full';
+if (moonPhase === 'full'){
+  console.log('Howl!');
+} else {
+  console.log('I swear I am not a werewolf.');
+}
+
+
+
+let stopLight = 'green';
+
+if (stopLight === 'red') {
+  console.log('Stop');
+} else if (stopLight === 'yellow') {
+  console.log('Slow down');
+} else if (stopLight === 'green') {
+  console.log('Go!');
+} else {
+  console.log('Caution, unknown!');
+}
+
+
+if (stopLight === 'green' && pedestrians === false) {
+  console.log('Go!');
+} else {
+  console.log('Stop');
+}
+
+
+switch statements
+let groceryItem = 'papaya';
+
+switch (groceryItem) {
+  case 'tomato':
+    console.log('Tomatoes are $0.49');
+    break;
+  case 'lime':
+    console.log('Limes are $1.49');
+    break;
+  case 'papaya':
+    console.log('Papayas are $1.29');
+    break;
+  default:
+    console.log('Invalid item');
+    break;
+}
+
+
+ternary operator
+
+isNightTime ? console.log('Turn on the lights!') : 
+console.log('Turn off the lights!');
+
+
+Functions
+
+
+
+let calculatorIsOn = false;
+
+const pressPowerButton = () => {
+  if (calculatorIsOn) {
+    console.log('Calculator turning off.');
+    calculatorIsOn = false;
+  } else {
+    console.log('Calculator turning on.');
+    calculatorIsOn = true;
+  }
+};
+
+pressPowerButton();
+// Output: Calculator turning on.
+
+pressPowerButton();
+// Output: Calculator turning off.
+
+
+() =>, indicating the variable stores a function
+
+
+Parameters are variables in a function definition that represent data we can input into the function. 
+Arguments are the values of the variables 
+
+const multiplyByThirteen = (inputNumber) => {
+  console.log(inputNumber * 13);
+};
+
+multiplyByThirteen(9);
+// Output: 117
+
+Note on terminology: inputNumber is a parameter, but when we call multiplyByThirteen(9), the 9 is called an argument. In other words, arguments are provided when you call a function, and parameters receive arguments as their value. When we set the value 9 as the argument, we pass a value to the function.
+
+
+setting two parameters
+const getAverage = (numberOne, numberTwo) => {
+  const average = (numberOne + numberTwo) / 2 ;
+  console.log(average);
+};
+
+getAverage(365, 27);
+// Output: 196
+
+
+
+const takeOrder = (topping, crustType) => {
+  
+  console.log('Order:' + crustType + 'pizza topped with' + topping);
+};
+
+takeOrder('bacon', 'thin crust');
+takeOrder('cheese', 'medium crust');
+takeOrder('peppers', 'thick crust');
+
+
+
+
+const getAverage = (numberOne, numberTwo) => {
+  const average = (numberOne + numberTwo) / 2;
+  return average;
+}
+
+console.log(getAverage(365, 27));
+// Output: 196
+
+
+
+
+
+
+
+
+let orderCount = 0
+
+const takeOrder = (topping, crustType) => {
+  orderCount++;
+  console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+};
+
+takeOrder('mushrooms', 'thick crust');
+takeOrder('cheese', 'medium crust')
+takeOrder('peppers', 'thin crust')
+
+
+
+
+
+
+
+let orderCount = 0;
+
+const takeOrder = (topping, crustType) => {
+  orderCount++;
+  console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+};
+
+takeOrder('mushroom', 'thin crust');
+takeOrder('spinach', 'whole wheat');
+takeOrder('pepperoni', 'brooklyn style');
+
+const getSubTotal = (itemCount) => {
+  return itemCount * 7.5;
+};
+
+console.log(getSubTotal(orderCount));
+
+
+
+
+
+
+
+
+
+
+
+let orderCount = 0;
+
+const takeOrder = (topping, crustType) => {
+  orderCount++;
+  console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+};
+
+takeOrder('mushroom', 'thin crust');
+takeOrder('spinach', 'whole wheat');
+takeOrder('pepperoni', 'brooklyn style');
+
+const getSubTotal = (itemCount) => {
+  return itemCount * 7.5;
+};
+
+const getTax = () => {
+ return getSubTotal(orderCount) * 0.06; 
+};
+
+const getTotal = () => {
+  return getSubTotal(orderCount) + getTax(); 
+}; 
+
+console.log(getSubTotal(orderCount));
+console.log(getTotal());
+
+
+
+
+
+
+
+
+
+
+
+
+A function declaration is a function that is bound to an identifier or name. 
+
+function square (number) {
+  return number * number; 
+}
+
+console.log(square(5));
+// Output: 25.
+
+
+
+function isGreaterThan (numberOne, numberTwo){
+  if (numberOne > numberTwo) 
+  { 
+    return true;
+} else {
+  return false; 
+}
+}  
+
+
+
+
+function isGreaterThan(numberOne, numberTwo){
+  if(numberOne > numberTwo){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+isGreaterThan(4, 8)
+
+
+
+
+
+
+
+
+Function Expressions
+A function expression is similar to function declaration, with the exception that identifier can be omitted, creating an anonymous function.
+
+
+
+const square = function (number) {
+  return number * number;
+};
+
+console.log(square(5));
+// Output: 25.
+
+
+
+const square = (number) => {
+  return number * number;
+};
+
+console.log(square(5));
+// Output: 25.
+
+
+
+
+
+
+
+Arrow Functions
+
+const multiplyByNineFifths = (celsius) => {
+  return celsius * (9/5);
+};
+
+const getFahrenheit = (celsius) => {
+  return multiplyByNineFifths(celsius) + 32;
+};
+
+console.log('The temperature is ' + getFahrenheit(15) + '°F');
+
+
+
+    Functions that take a single parameter should not use parentheses. The code will still work, but it's better practice to omit the parentheses around single parameters. However, if a function takes zero or multiple parameters, parentheses are required.
+    A function composed of a sole single-line block is automatically returned. The contents of the block should immediately follow the arrow => and the return keyword can be removed. This is referred to as implicit return.
+    A function composed of a sole single-line block does not need brackets.
+
+
+
+const multiplyByNineFifths = celsius => celsius * (9/5);
+
+const getFahrenheit = celsius => multiplyByNineFifths(celsius) + 32;
+
+console.log('The temperature is ' + getFahrenheit(15) + '°F');
+
+
+
+
+
+
+
+
+
+Scope
+Scope refers to where a variable can be accessed in a program. 
+
+
+const color = 'blue'
+
+const colorOfSky = () => {
+  return color; // blue 
+};
+
+console.log(colorOfSky()); // blue
+
+
+
+
+
+
+Block Scope
+A block refers to the {} braces of a function, a loop, or an if statement, and serves as an important structural marker for our code. Block scope means that a variable defined in the block is only accessible within the curly braces.
+
+
+const colorOfSky = () => {
+  let color = 'blue'; 
+  console.log(color); // blue 
+};
+
+colorOfSky(); // blue 
+console.log(color); // undefined
+
+
+
+
+
+const visibleLightWaves = () => {
+  let lightWaves = 'Moonlight';
+  console.log(lightWaves);
+};
+
+visibleLightWaves();
+console.log(lightWaves);
+
+
+
+
+const colorOfSky = () => {
+  const dusk = true;
+  let color = 'blue'; 
+  if (dusk) {
+    let color = 'pink';
+    console.log(color); // pink
+  }
+  console.log(color); // blue 
+};
+
+colorOfSky(); // blue
+console.log(color); // undefined
+
+
+
+
+
+const visibleLightWaves = () => {
+  let lightWaves = 'Moonlight';
+  console.log(lightWaves());
+
+  let region = 'The Arctic';
+  if (region) {
+    let lightWaves = 'Northern Lights'
+    console.log(lightWaves);
+  }
+};
+visibleLightWaves();
+
+
+
+
+const visibleLightWaves = () => {
+  let lightWaves = 'Moonlight';
+  let region = 'The Arctic';
+    if (region === 'The Arctic') {
+      let lightWaves = 'Northern Lights';
+      console.log(lightWaves);  
+    }
+  console.log(lightWaves);
+};
+
+visibleLightWaves();
+
+
+
+
+
+
+for loops
+const cloudCount = () => {
+  let i = 2;
+  console.log(i); // 2
+  for (let i = 0; i < 10; i++) {
+    console.log(i); // All numbers from 0 to 9
+  }
+};
+
+cloudCount();
+console.log(i); // undefined
+
+
+
+
+starCount();
+console.log(i);
+
+const starCount = () => {
+  let i = 5;
+  console.log(i);
+  for (let i = 0; i<12; i++) {
+    console.log(i);
+  }
+};
+starCount();
+console.log(i);
+
+
+
+
+const starCount = () => {
+  let i = 5;
+  console.log(i);
+  for (let i = 0; i < 12; i++) {
+    console.log(i);  
+  }
+};
+
+starCount();
+
+
+
+
+
+
+
+Arrays
+
+let newYearsResolutions = ['Rappel into a cave', 
+'Take a falconry class', 'Learn to juggle'];
+
+
+
+
+
+
+Property access
+
+array like this:
+
+let newYearsResolutions = ['Rappel into a cave', 
+'Take a falconry class', 'Learn to juggle'];
+
+console.log(newYearsResolutions[0]);
+// Output: 'Rappel into a cave'
+
+
+
+
+
+
+let newYearsResolutions = ['Dance', 'Sing', 'Hair'];
+
+console.log(newYearsResolutions);
+
+let listItem = ['Dance', 'Sing', 'Hair'];
+console.log(listItem[0]);
+
+console.log(listItem[2]);
+
+
+
+
+let newYearsResolutions = ['Run a marathon', 'Learn a new language', 'Read 52 books'];
+
+let listItem = newYearsResolutions[0];
+console.log(listItem);
+
+console.log(newYearsResolutions[2]);
+console.log(newYearsResolutions[3]);
+
+
+
+
+Update Elements
+
+let seasons = ["Winter", "Spring", "Summer", "Fall"];
+
+seasons[3] = "Autumn";
+console.log(seasons) 
+//Output: 
+//Winter 
+//Spring
+//Summer
+//Autumn
+
+
+
+
+
+Length Property
+
+let newYearsResolutions = ['Rappel into a cave', 
+'Take a falconry class'];
+
+console.log(newYearsResolutions.length);
+// Output: 2
+
+
+
+
+
+push methods - add items 
+
+let newYearsResolutions = ['item 0', 'item 1', 'item 2'];
+newYearsResolutions.push('item 3', 'item 4');
+
+
+
+pop method - remove items
+
+let newYearsResolutions = ['item 0', 'item 1', 'item 2'];
+newYearsResolutions.pop();
+console.log(newYearsResolutions); 
+// Output: [ 'item 0', 'item 1' ]
+
+
+
+.join(), .slice(), .splice(), .shift(), .unshift(), and .concat() 
+
+
+
+groceryList.unshift(popcorn);
+console.log(groceryList.unshift(popcorn));
+
+
+
+
+
+
+let groceryList = ['orange juice', 'bananas', 'coffee beans', 
+'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+
+groceryList.unshift('popcorn');
+
+console.log(groceryList);
+
+groceryList.splice('')
+
+
+
+
+
+let groceryList = ['orange juice', 'bananas', 'coffee beans', 
+'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+groceryList.shift();
+
+groceryList.unshift('popcorn');
+console.log(groceryList);
+
+console.log(groceryList.slice(1, 4));
+console.log(groceryList);
+
+
+
+
+
+
+
+
+
+
+
+    for loops, which let us loop a block of code a known amount of times.
+
+    while loops, which let us loop a block of code an unknown amount of times.
+
+
+
+
+
+
+For loops
+let animals = ["Grizzly Bear", "Sloth", "Sea Lion"];
+
+for (let animalIndex = 0; animalIndex < animals.length; animalIndex++) {
+  console.log(animals[animalIndex]);
+}
+
+start condition 
+stop condition
+iterator
+
+
+
+
+
+
+let vacationSpots = ['iceland', 'CA', 'Ny'];
+for (let vacationSpotsIndex = 0; vacationSpotsIndex < vacationSpots.length; vacationSpotsIndex++) {
+  console.log(vacationSpots[vacationSpotsIndex]);
+}
+
+
+
+let vacationSpots = ['Mozambique', 'Thailand', 'Bolivia'];
+
+for (let vacationSpotIndex = 0; vacationSpotIndex < vacationSpots.length; vacationSpotIndex++) {
+  console.log('I would love to visit ' + vacationSpots[vacationSpotIndex]);
+}
+
+
+
+
+
+
+
+
+
+
+nested for loops
+
+
+
+for (let i = 0; i < myArray.length; i++) {
+  for (let j = 0; j < yourArray.length; j++) {
+    //Code To Run
+   }
+ }
+
+
+
+
+let myPlaces = ['NY', 'CA', 'Iceland'];
+let friendPlaces = ['NY', 'Canada', 'Hawaii'];
+
+for (let myPlacesIndex = 0; myPlacesIndex < myPlaces.length; myPlaces++) {
+  console.log(myPlaces[myPlacesIndex]);
+}
+
+
+
+
+let myPlaces = ['Houston', 'Sioux Falls', 'Phoenix'];
+
+let friendPlaces = ['Sioux Falls', 'Missoula', 'Buffalo'];
+
+for (let myPlacesIndex = 0; myPlacesIndex < myPlaces.length; myPlacesIndex++) {
+  for (let friendPlacesIndex = 0; friendPlacesIndex < friendPlaces.length; friendPlacesIndex++) {
+    if (myPlaces[myPlacesIndex] === friendPlaces[friendPlacesIndex]) {
+      console.log(friendPlaces[friendPlacesIndex]);
+    }
+  }
+}
+
+let (friendPlacesIndex = 0; friendPlacesIndex < friendPlaces.length; friendPlacesIndex++) {
+  if (myPlaces[myPlacesIndex] === friendPlaces[friendPlacesIndex]) [
+  console.log(friendPlaces[friendPlacesIndex]);
+}
+
+
+
+if (array[i] === otherArray[j]) {
+    console.log('Match: ' + array[i]);
+}
+
+
+
+
+
+While Loops
+
+while (condition) {
+  // Code block that loops until condition is false
+}
+
+
+
+
+
+
+let cards = ['Diamond', 'Spade', 'Heart', 'Club'];
+
+let currentCard = 'Spade'; 
+
+while (currentCardIndex = 0; currentCardIndex < currentCard.length; currentCard++;) {
+  if ()
+}
+
+
+
+
+
+Functions
+
+
+var functionName = function() {
+
+};
+functionName(); 
+
+
+
+
+
+var functionName = function(x, y) {
+  
+};
+functionName(200,300); 
+
+
+
+var calcTotalDonuts = function(numYears) {
+  return 1* 52* numYears; 
+};
+
+calcTotalDonuts(14);
+
+
+
+
+
+var lifeInches = 20; 
+
+var calcInches = function(startAge, endAge, inchesPerYear) {
+  
+  var totalInches = inchesPerYear * (endAge-startAge);
+  lifeInches += totalInches; 
+  return totalInches; 
+}
+
+text("from 0-8 years:"); 
+text(calcInches(0,8,2.5));
+
+text("from 8-16 years:");
+text(calcInches(8,16,2));
+
+text("total grown over life:"); 
+text(lifeInches);
+
+
+
+var varName = x; 
+
+if (condition) {
+  code to run; 
+}
+
+
+not equal to !==
+
+
+if (X && Y) {
+  
+}
+
+if (X || Y) {
+  
+}
+
+
+
+
+avoid infinite loops
+if (counter ===37){
+  break;
+}
+
+
+! swaps the truthiness of values
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+p {
+   border-left: 5px solid grey; 
+   padding: 5px;
+   /*font-family: "Open Sans"; */
+   border-left: 3px solid #69696a;
+}
+
+
+.topnav {
+   overflow: hidden;
+   color: black;
+   margin-right: 100px;
+}
+
+.topnav a {
+   float: right;
+   color: black;
+   text-align: center;
+   padding: 9px 19px;
+   text-decoration: none;
+   font-size: 17px;
+}
+
+.topnav a:hover {
+ border-radius: 30px; 
+ color: white;
+ background-color: black; 
+}
+
+.btn {
+  padding: 9px 19px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  margin: 0 auto;
+}
+
+
+.btn:hover {
+   background: #3e3e3e;
+}
+
+.button {
+   width: 100%;
+   position: absolute;
+   bottom: 25px;
+   text-align: center;
+}
+
+#logo {
+  float: left;
+}
+
+.main {
+   width: 40%;
+}
+
+.circles {
+   float: right;
+}
+
+
+.circle {
+ -moz-border-radius: 50%;
+ -webkit-border-radius: 50%;
+}
+
+.orange {
+ background-color: rgba(247, 193, 162, 0.7);  
+ width: 150px;
+ height: 150px;
+ position: absolute;
+ top: 35%; 
+ left: 68%;
+
+}
+.purple {
+ background-color: rgba(207, 130, 213, 0.6);
+ width: 100px;
+ height: 100px;
+ position: absolute;
+ top: 20%; 
+ left: 68%;
+}
+
+.pink {
+ background-color: rgba(247, 136, 167, 0.6);
+ width: 250px;
+ height: 250px;
+ position: absolute;
+ top: 20%; 
+ left: 50%;
+}
+
+.main-container {
+   background-color: #f9fafc;
+   height: 500px;
+   padding-bottom: 10px; 
+   position: relative;
+}
+
+
+h1 {
+   font-size: 30px; 
+}
+
+
+

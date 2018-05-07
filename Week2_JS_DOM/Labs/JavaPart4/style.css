@@ -1,0 +1,79 @@
+body {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+#backgroundimg {
+    width: 100%; 
+    position: relative;  
+}
+
+.form {
+    display: flex; 
+    flex-direction: column; 
+    background-color: rgba(0,0,0,0.6); 
+    width: 50%; 
+    margin: 0 auto; 
+    position: absolute; 
+    right: 20px; 
+    left: 20px; 
+    top: 5px; 
+    border-radius: 5px; 
+}
+
+.forminputs {
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 20px; 
+    padding: 10px; 
+}
+
+p {
+    color: white; 
+    text-align: center; 
+}
+
+input {
+   border-radius: 5px; 
+    margin: 10px; 
+}
+
+.boxes {
+    display:flex; 
+    width: 90%; 
+    margin: 0 auto; 
+    position: absolute; 
+    bottom: 15px; 
+    color: black; 
+    justify-content: space-between; 
+    align-content: space-between; 
+    border-radius: 5px; 
+    padding-left: 10px; 
+}
+
+.box {
+    display: flex; 
+    flex-direction: column; 
+    background-color: lightgray; 
+    padding: 5px 0px 5px 5px; 
+    font-size: .75rem; 
+    border-radius: 5px; 
+    position: relative; 
+ }
+
+ li {
+    list-style-type: none;
+ }
+
+ .trashcan {
+     width: 20%; 
+     height: 20%; 
+     position: absolute; 
+     left: 90%;
+     top: 90%;  
+     border-radius: 50%; 
+     border: 1px solid black; 
+ }
+
+ ul {
+     padding: 5px 20px 5px 5px; 
+ }

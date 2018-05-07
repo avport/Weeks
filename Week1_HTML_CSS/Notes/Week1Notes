@@ -1,0 +1,135 @@
+Week 1 Class Notes
+version control/source control 
+
+centralized - run on one server. users take terns making changes to server
+distributed - 
+
+structure 
+directory
+	index.html
+	CSS foleder with style sheets
+	JS with folders
+	views with html
+
+semantic tags help with google rating
+
+pseudo class
+.box: first-child: blue;
+selector is box, pheudo selector is first-child
+
+li: first-letter {
+	font-size: 150%; 
+}
+
+rems and percentages are best, better than em and pixels
+
+
+
+
+Positioning 
+put absolute inside relative containers - the stuff moved will move relative to container
+
+static- can't apply offset 
+
+relative inside relative - moves based on parent
+
+absolute applied to static or relative pulls items from flow 
+-applying offset will move the absolute item in a static container will move it relative to viewport
+-applying offset will move absolute item inside absolute container relative to the container
+
+fixed - will be offset relative to container they were in 
+
+
+Lab1
+nav bar (logo and ul)
+middle 
+use floats and clear margin 0 auto 
+
+
+transform: translateX(-50%);
+
+
+
+justify-content main axis
+align-items cross axis
+display: flex; 
+
+
+Media queries - after the screen is at least 480 px these are the changes that happen 
+@media only screen and (min-width: 480px){
+	.title{
+	font-size: 24px; 
+	}
+	.generic-text{
+	font-size: 18px; 
+	}
+}
+
+
+design for 350px at smallest 
+
+
+display: none; 
+
+
+mobile
+
+tablet min 768
+
+desttop min 1200
+
+head first design patterns
+
+
+margin: 0 auto; centers an element within its parent
+text-align: center; centers text within an element 
+
+relative: relative to its current position, but can be moved relative to itselt
+absolute: positioned absolute to its closest positioned parnent. if there isn't one, its relative to the window 
+fixed: 
+static: 
+
+
+.clearfix {
+  overflow: auto;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+wireframe.cc is free
+
+
+bootstrap
+put bootstrap link before my style.css
+
+
+
+Location
+sign in/profile
+in app contact essaging
+terms and conditions
+availablity
+FAQ/dog 101
+events
+search bar 
+
+dribble 
+boot strap 
+homepage 
+
+
+
+
+
+
+
+
+
+
+

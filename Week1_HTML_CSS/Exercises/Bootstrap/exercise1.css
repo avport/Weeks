@@ -1,0 +1,42 @@
+.btn-success {
+	margin-top: 10px; 
+	margin-bottom: 10px; 
+}
+
+.container {
+	background-color: grey; 
+	margin-top: 30px; 
+	border-radius: 1%; 
+}
+
+body {
+	background-color: orange;
+	font-family: 'Raleway', sans-serif; 
+}
+
+.form-text {
+	color: white;
+}
+
+h1 {
+	color: grey;
+	text-align: center; 
+	margin-top: 10px; 
+	font-weight: bold;
+}
+
+.name {
+	margin-top: 10px; 
+}
+
+.form-control:hover. .form-control:active {
+	box-shadow: green; 
+	border-color: green; 
+}
+
+
+
+
+
+
+

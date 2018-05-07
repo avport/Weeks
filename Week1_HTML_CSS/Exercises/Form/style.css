@@ -1,0 +1,96 @@
+/* .contactcontainer {
+	padding: 30px; 
+	margin: 30px; 
+	display: flex; 
+	flex-direction: column;
+	color: #7E7E7E;
+	background-color: #D47677; 
+	justify-content: center;
+	text-align: center;
+	font-size: 0.8rem;
+	width: 40%;
+	margin: 0 auto;
+
+
+}
+
+.containerelements {
+	flex-direction: column;
+	border: ;1px solid #fff;
+	display: flex;
+	border-style: solid; 
+	background-color: #F0F0F0;
+	border-color: #F0F0F0;
+	margin: 30px;
+	justify-content: center;
+	text-align: center;
+}
+
+p {
+	color: #7E7E7E;
+}
+
+
+
+.menu {
+	border: 1px solid #fff;  /* For debugging */
+	/* width: 900px;
+}
+
+#button {
+	color: white;
+	background-color: #9DD8D4; 
+	border: none;
+	margin: 20px;
+
+	
+}
+
+.checkmark {
+	font-size: 0.5rem; 
+
+}
+
+input {
+	margin-bottom: 10px; 
+	flex-direction: column;
+} */ 
+
+
+/* .container {
+	display: flex; 
+	flex-direction: column; 
+	border: 40px solid pink; 
+	width: 40%; 
+	margin: auto; 
+	background-color: grey; 
+}
+
+.form {
+	display: flex; 
+	flex-direction: column; 
+	border: 10px, solid, pink; 
+	width: 50%; 
+	margin: auto; 
+	padding: 20px; 
+	align-items: center; 
+	justify-content: space-between;
+	margin-bottom: 20px;  
+}
+
+p {
+	text-align: center; 
+}
+
+button {
+	width: 50%; 
+	margin: auto; 
+	margin-bottom: 10px; 
+}
+
+.form label {
+	margin-bottom: 10px; 
+}
+ */
+
+

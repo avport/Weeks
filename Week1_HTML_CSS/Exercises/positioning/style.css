@@ -1,0 +1,26 @@
+h1 {
+	background-color: pink; 
+	position: fixed;
+	top: 0px;
+	right: 0px;
+}
+
+body {
+	height: 200vh;
+}
+
+.box {
+	width: 500px; 
+	height: 500px;
+	border: 5px solid black;
+	position: relative;
+}
+
+.three {
+	position:absolute;
+    bottom:0;
+    right:0;
+	 
+
+}
+

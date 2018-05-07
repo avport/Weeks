@@ -1,0 +1,84 @@
+find the folder in finder
+How to navigate terminal
+cd .. = go up in folders
+cd ../.. to go back two 
+cd < directory i am moving to> moves me to that directory 
+cd space <tab tab> = shows me folders in my direcory 
+pwd = shows me directory i am in, entire path 
+ls enter to see all folders
+first command pwd, then ls
+ls -a to see hidden files, git tracking folder, .git
+only need to run git init once to get files to git hub then don't run again 
+cd ~ to get to root directory
+touch <file> to create a file (create files from the terminal). the ls to see file 
+touch index.html styles.css
+mkdir <cd> to create a folder 
+mkdir test/fun -this makes the folder 'fun' inside the folder 'test'
+&& runs two commands at once 
+mkdir test3 && cd test3 && touch file3
+clear - erases everthing in window  
+mv styles.css mobile.css - this will change file name to mobile 
+mv hello.txt test2/hello.txt - moves hello file to test2 folder 
+check with ls
+esc :wq if you forget -m
+
+
+Get project from Github - First time
+git clone <to go github and copy the address from 'clone or download'> copy folder next to git clone, then press enter
+puts repository into current directory 
+git status - see untracked files, run often
+.gitignore -list files/folders to ignore in repositories (DS_store, node_modules, checklist.txt)
+
+
+Save to Github - so the files are tracked. can't commit if not tracked 
+git add . - to track files. add is like a 'mini commit' 
+git commit -m "message here"
+git push
+
+
+**You will need this later**
+Get changes from Github - only use if changes are made to gihub by a third party
+git pull
+
+
+adam@grandcircus.co
+
+text editor
+vs code
+atom
+
+slack has a desttop app
+
+
+git init - new folder
+
+add a line to the file
+save
+git status
+git add <file name>
+git status
+git commit -m "kdsj"
+git status
+
+git log
+copy
+git revert --no-commit <link>..HEAD 
+
+q to escape 
+
+git reset --hard <link>
+
+moving files
+popcorn ashley$ mv ../cheese/yellowbutter ./
+i was in popcorn, i went back to cheese, grabbed yellowbutter and put it in current folder, popcorn
+
+adding labs
+go to git hub
+click +
+add name of folder
+follow directions
+
+
+
+
+
