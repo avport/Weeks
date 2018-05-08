@@ -1,0 +1,114 @@
+h1 {
+    color: #E34E45; 
+    text-align: center; 
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+   background-color: #E1D7D4; 
+}
+
+h1, h2, h3 {
+    font-family: 'Rubik', sans-serif;
+
+}
+
+#newreservation {
+    color: #E34E45; 
+}
+
+#save {
+    color: white; 
+    background-color: #008000; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+#inputform {
+    display: flex; 
+    flex-direction: column; 
+    margin: 0 auto; 
+    width: 60%; 
+    flex-direction: column; 
+}
+
+#x {
+    width: 10%; 
+}
+
+#firsttablerow {
+    display: flex; 
+}
+
+#secondtablerow {
+    display: flex; 
+}
+
+#thirdtablerow {
+    display: flex; 
+}
+
+li {
+    border: 1px solid black; 
+    border-radius: 50%; 
+    margin: 10px; 
+    padding: 20px; 
+    text-align: center; 
+    height: 10px; 
+    width: 10px; 
+}
+
+#tablefinder {
+    background-color: white; 
+    width: 50%; 
+    margin: 0 auto; 
+    margin-top: 10px; 
+  
+}
+
+#tablefinder h1  {
+    
+}
+
+#newreservation {
+    background-color: white; 
+    width: 60%; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+input {
+    margin: 10px; 
+    padding: 10px; 
+}
+
+#picktablenow {
+    text-align: center;
+}
+
+.available {
+    background-color: #CCC; 
+}
+
+
+.reserved {
+    background-color: #ADAAAA; 
+
+}
+.reserved, .not-allowed {
+    cursor: not-allowed;
+}
+
+.highlighted {
+    background-color: #EEE; 
+}
+
+.available {
+    cursor: pointer; 
+}
+
+
+
