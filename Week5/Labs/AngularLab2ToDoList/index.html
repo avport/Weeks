@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="TodoApp" lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>AngularJS Lab2</title>
+</head>
+
+<body>
+    <section ng-controller="TodoController as todo">
+        <div class="wrapper">
+            <h1>TODO List</h1>
+            <p>A place to store the things you have to do!</p>
+            <input ng-model="search.taskname" class="filter" type="text" placeholder="Filter your to-dos">
+            <div class="items" ng-repeat="task in todo.tasks |filter: search">
+                <div class="firstitems">
+                    <p>{{$index + 1}}. </p>
+                    <button class="completebtn" type="button" ng-if="false === task.completestatus" ng-click="todo.completeTask($index);">Complete</button>
+                    <p ng-class="{'completed': task.completestatus === true}">{{task.taskname}}</p>
+                </div>
+                <div class="lastitems">
+                    <!-- <input type="checkbox" ng-model="clicked" ng-init="clicked=true" /> -->
+                    <button type="button" href="" ng-click="todo.removeTask($index);" class="xbtn">
+                        <i class="material-icons">close</i>
+                    </button>
+                </div>
+            </div>
+            <div class="bottom">
+                <input class="addtodo" type="text" placeholder="Add your to-do" ng-model="todo.tasks.taskname">
+                <button ng-click="todo.addTask(todo.tasks.taskname);" class="addbutton" type="button">Add</button>
+            </div>
+    </section>
+    </div>
+    <script src="https://code.angularjs.org/1.6.5/angular.js"></script>
+    <script src="module.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
