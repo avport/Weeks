@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="GCApp" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Express Demo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <h1>Shopping Cart</h1>
+
+  <cart-items></cart-items>
+  <ng-view></ng-view>
+
+  <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
+  <script src="js/module/module.js"></script>
+  <script src="js/config/config.js"></script>
+  <script src="js/components/items.js"></script>
+  <script src="js/services/item-service.js"></script>
+
+</body>
+</html>
